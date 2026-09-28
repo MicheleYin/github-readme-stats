@@ -24,12 +24,14 @@ permissions:
 
 jobs:
   CodeQL-Build:
+    if: github.repository == 'anuraghazra/github-readme-stats'
+
     # CodeQL runs on ubuntu-latest, windows-latest, and macos-latest
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@1d96c772d19495a3b5c517cd2bc0cb401ea0529f # v4.1.3
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
       # Initializes the CodeQL tools for scanning.
       - name: Initialize CodeQL
